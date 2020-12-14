@@ -46,7 +46,22 @@ var availableFood = {
     {name:"Salmon en papillote", rating:"3.7/5"},
     {name:"Quiche Lorraine", rating:"5/5"},
     {name:"Croque monsieur", rating:"4/5"}
-
+  ],
+  Indian: [
+    {name:"Chicken tikka masala", rating:"5/5"},
+    {name:"Chicken Doughy, butter-brushed naan", rating:"4.6/5"},
+    {name:"Lamb vindaloo", rating:"4/5"},
+    {name:"Pakora", rating:"4.1/5"},
+    {name:"Biryani", rating:"4.9/5"},
+    {name:"Kebab", rating:"4.5/5"}
+  ],
+  Spanish: [
+    {name:"Paella Valenciana", rating:"3.9/5"},
+    {name:" Patatas bravas", rating:"4/5"},
+    {name:" Pimientos de Padron", rating:"4.3/5"},
+    {name:"Croquetas", rating:"3.9/5"},
+    {name:"Bacalao", rating:"4.9/5"},
+    {name:"Leche frita", rating:"4.7/5"}
   ]
 }
 
@@ -60,6 +75,7 @@ clickedFoodSet = (settingfood) =>  {
 
   setFood(settingfood);
 }
+
 
 console.log(food);
 
@@ -97,7 +113,8 @@ console.log(food);
                   <li className="list-item-border">
                     <div>
                        <span>DishName: </span>
-                       <span className="Food-name-color">{food.name}
+                       <span className="Food-name-color">
+                       {food.name}
                     </span></div>
                     <div style={{margin:"0.5rem"}}></div>
                     <div>
