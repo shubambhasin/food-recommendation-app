@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import "./styles.css";
 
-const availableFood = {
+var availableFood = {
 
   Chinese: [
     {name:'Hotpot', rating:'4/5'},
@@ -49,58 +49,72 @@ const availableFood = {
   ]
 }
 
+var foodArray = Object.keys(availableFood);
 
-var foods = Object.keys(availableFood);
 
-console.log(foods)
+
+
 
 export default function App() {
 
-  const [food, setFood] = useState("French")
-
   
-showFoodDetails = (food) => {
+const [food, setFood] = useState("Mexican")
 
-  setFood(food);
+clickedFoodSet = (settingfood) =>  {
 
-//
+  setFood(settingfood);
+  
+
 }
+
+console.log(food);
+
 
 
 
   return (
     <div className="App">
 
-        <h1>Food Recommendation App</h1>
-        <h2>Available Cuisines</h2>
+      <h1>Food Recommentdation App</h1>
 
-        <div>
-          {foods.map((food) => {
+      <h2>Cuisines Available</h2>
 
+      <div>
+        {foodArray.map((food) => {
             return(
-
               <button
-              onClick={showFoodDetails(food)}
+              className="button-ui"
+              onClick={() => {clickedFoodSet(food)}}
               >{food}</button>
-
             )
+        })}
+      </div>
+      <div>
+        <ul className="no-bullet list-ui">
+          {
+            availableFood[food].map((food) => {
+                return(
+                  
+                  <li className="list-item-border">
+                    <div>
+                       {food.name}
+                    </div>
+                    
+                    <div>
+                        {food.rating}
+                    </div>
+                  </li>
+                  
+
+                )
+            })
+
           }
+        </ul>
+      </div>
 
-           
 
 
-          )}
-
-        </div>
-        <div>
-
-          <ul>
-
-            {}
-
-          </ul>
-
-        </div>
 
 
     </div>
