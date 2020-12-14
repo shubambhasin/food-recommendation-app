@@ -1,7 +1,7 @@
 body
 {
   
-  background: url("foodAppBg");
+  background: url("https://raw.githubusercontent.com/shubambhasin/food-recommendation-app/main/src/foodAppBg.jpg");
   background-repeat: no-repeat;
   background-size: cover
 }
