@@ -70,3 +70,14 @@ background-color: orange;
 
 
 }
+
+footer
+{
+
+  min-height: 20vh;
+  background-color: #fd3a69;
+  padding:1rem;
+  border-top-left-radius:1rem;
+  border-top-right-radius:1rem;
+  margin-top:2rem;
+}

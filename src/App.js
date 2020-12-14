@@ -55,6 +55,7 @@ var availableFood = {
     {name:"Biryani", rating:"4.9/5"},
     {name:"Kebab", rating:"4.5/5"}
   ],
+
   Spanish: [
     {name:"Paella Valenciana", rating:"3.9/5"},
     {name:" Patatas bravas", rating:"4/5"},
@@ -98,6 +99,7 @@ console.log(food);
         {foodArray.map((food) => {
             return(
               <button
+              key={food}
               className="button-ui"
               onClick={() => {clickedFoodSet(food)}}
               >{food}</button>
@@ -107,10 +109,12 @@ console.log(food);
       <div>
         <ul className="no-bullet list-ui">
           {
-            availableFood[food].map((food) => {
+            availableFood[food].map((food,index) => {
                 return(
                   
-                  <li className="list-item-border">
+                  <li 
+                  key={index}
+                  className="list-item-border">
                     <div>
                        <span>DishName: </span>
                        <span className="Food-name-color">
@@ -129,6 +133,10 @@ console.log(food);
           }
         </ul>
       </div>
+
+      <footer>
+            <h3>Made by Shubam Bhasin in Jammu and Kashmir</h3>
+        </footer>
 
 
 
