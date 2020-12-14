@@ -1,13 +1,25 @@
 body
 {
-  margin: 0px;
-  padding: 0px;
+  
+  background: url("foodAppBg");
+  background-repeat: no-repeat;
+  background-size: cover
 }
 .App {
   font-family: sans-serif;
   text-align: center;
-  background-color:#fce33a;
+  padding-top: 0px;
   
+}
+
+.heading
+{
+  color: #fd3a69;
+}
+
+.orange
+{
+  color: 
 }
 
 .button-ui
@@ -15,8 +27,9 @@ body
   font-size: 1rem;
   padding: 0.5rem 1rem;
   margin: 0.5rem;
-  border: 0.1px solid orange;
+  border: none;
   border-radius: 0.5rem;
+  background: #fd3a69;
   
 }
 
@@ -25,6 +38,10 @@ body
 background-color: orange;
 }
 
+.Food-name-color
+{
+  color: #fd3a69
+}
 .no-bullet
 {
   list-style: none;
@@ -42,10 +59,12 @@ background-color: orange;
 .list-item-border
 {
 
-  border: 1px solid orange;
+ 
   padding: 1rem;
   margin: 1rem;
   border-radius: 1rem;
+
+  background-color: #fff;
 
   
 

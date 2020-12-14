@@ -74,10 +74,17 @@ console.log(food);
 
   return (
     <div className="App">
+      <div>
+      <h2>Food Recommentdation 
+      <span
+      style={{color:"black"}}
+      > App</span></h2>
+      </div>
 
-      <h1>Food Recommentdation App</h1>
-
-      <h2>Cuisines Available</h2>
+      <h3 
+      style={{color:"#fd3a69"}}
+      >Cuisines Available</h3>
+      
 
       <div>
         {foodArray.map((food) => {
@@ -97,11 +104,12 @@ console.log(food);
                   
                   <li className="list-item-border">
                     <div>
-                       {food.name}
-                    </div>
-                    
+                       <span>DishName: </span>
+                       <span className="Food-name-color">{food.name}
+                    </span></div>
+                    <div style={{margin:"0.5rem"}}></div>
                     <div>
-                        {food.rating}
+                       Rating: {food.rating}
                     </div>
                   </li>
                   
